@@ -1,0 +1,47 @@
+name: Reusable Node/TS CI
+
+on:
+  workflow_call:
+    inputs:
+      working-directory:
+        description: "Directory containing package.json"
+        type: string
+        default: "."
+      node-version:
+        description: "Node.js version to use"
+        type: string
+        default: "lts/*"
+      lint-script:
+        description: "npm script to run for linting"
+        type: string
+        default: "lint"
+      build-script:
+        description: "npm script to run for building"
+        type: string
+        default: "build"
+      test-script:
+        description: "npm script to run for testing"
+        type: string
+        default: "test"
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{ inputs.working-directory }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ inputs.node-version }}
+          cache: "npm"
+          cache-dependency-path: ${{ inputs.working-directory }}/package-lock.json
+      - name: Install dependencies
+        run: npm ci
+      - name: Lint
+        run: npm run ${{ inputs.lint-script }} --if-present
+      - name: Build
+        run: npm run ${{ inputs.build-script }} --if-present
+      - name: Test
+        run: npm run ${{ inputs.test-script }} --if-present

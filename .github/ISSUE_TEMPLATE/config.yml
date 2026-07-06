@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/tpt-solutions/.github/security/advisories/new
+    about: Please report security vulnerabilities privately, not as a public issue.
+  - name: Discord community
+    url: https://discord.gg/rC7Ss7UVu
+    about: Chat with the community — not for bug reports or feature requests.

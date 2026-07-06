@@ -1,0 +1,35 @@
+name: Reusable label sync
+
+on:
+  workflow_call:
+    inputs:
+      labels-ref:
+        description: "Branch/tag/sha of tpt-solutions/.github to pull labels.yml from"
+        type: string
+        default: "main"
+      dry-run:
+        description: "Preview changes without applying them"
+        type: boolean
+        default: false
+
+jobs:
+  sync-labels:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Checkout canonical labels
+        uses: actions/checkout@v4
+        with:
+          repository: tpt-solutions/.github
+          ref: ${{ inputs.labels-ref }}
+          path: .org-github
+          sparse-checkout: |
+            labels.yml
+          sparse-checkout-cone-mode: false
+      - name: Sync labels
+        uses: crazy-max/ghaction-github-labeler@v5
+        with:
+          yaml-file: .org-github/labels.yml
+          skip-delete: false
+          dry-run: ${{ inputs.dry-run }}
