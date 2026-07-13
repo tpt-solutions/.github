@@ -19,7 +19,7 @@ jobs:
       issues: write
     steps:
       - name: Checkout canonical labels
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: tpt-solutions/.github
           ref: ${{ inputs.labels-ref }}
@@ -28,7 +28,7 @@ jobs:
             labels.yml
           sparse-checkout-cone-mode: false
       - name: Sync labels
-        uses: crazy-max/ghaction-github-labeler@v5
+        uses: crazy-max/ghaction-github-labeler@v6
         with:
           yaml-file: .org-github/labels.yml
           skip-delete: false
