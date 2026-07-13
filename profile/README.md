@@ -1,12 +1,9 @@
-## Hi there 👋
+Default community health files, issue templates, and reusable CI/release workflows for all tpt-solutions repositories.
 
-<!--
-
-**Here are some ideas to get you started:**
-
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--->
+Contributing: CONTRIBUTING.md — issues only, see there for details.
+Code of Conduct: CODE_OF_CONDUCT.md
+Security: SECURITY.md
+Support / Discord: SUPPORT.md · Join the Discord
+Donate: Support development via Stripe
+License
+Apache License 2.0
