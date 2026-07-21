@@ -14,4 +14,14 @@ repositories.
 
 ## License
 
-[Apache License 2.0](LICENSE)
+This project is dual-licensed under either of:
+
+- [Apache License, Version 2.0](LICENSE-APACHE)
+- [MIT License](LICENSE-MIT)
+
+at your option.
+
+Found a bug, have a question, or came across a repository under
+[tpt-solutions](https://github.com/tpt-solutions) that still needs to be
+updated to this dual-license model? Please [open an issue](../../issues) —
+see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
