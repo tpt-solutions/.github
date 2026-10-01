@@ -21,6 +21,9 @@ This project is dual-licensed under either of:
 
 at your option.
 
+A map of my foundation repos can be found here.
+https://github.com/tpt-solutions/tpt-readme
+
 Found a bug, have a question, or came across a repository under
 [tpt-solutions](https://github.com/tpt-solutions) that still needs to be
 updated to this dual-license model? Please [open an issue](../../issues) —
